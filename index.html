@@ -4,50 +4,21 @@
         <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
         <meta charset="UTF-8">
-        <title>탐색법</title>
+        <title>선형탐색법</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
     <body>
         <py-env>
             - pandas
         </py-env>
-        <py-script> 
-            import pandas as pd 
-            from pyodide.http import open_url
-            url_content = open_url("192.168.0.5/genius/data.html")
-            df = pd.read_csv(url_content)
-            #print(df)    
-            csv = Element('csv')
-            csv.write(df.head())
-        </py-script>|
-        <p id="csv"></p>
-        <table class="position-absolute top-0 end-0" width ="300">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">이름</th>
-                <th scope="col">주제</th>
-              </tr>
-            </thead>
-            <tbody id="table">
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-            </tbody>
-          </table>
-          <h5 id="result"></h5>
+        <py-script src="index.py"> </py-script>|
+        <table class="position-absolute top-0 end-0" id="csv"></table>
+        <div width="50">    
+            <input class="form-control" placeholder="Search" id="userinput" type="text" width="50">
+            <button width="50" class="btn btn-outline-secondary " type="button" id="button-addon2" pys-onClick="Search">Search</button>
+        </div>
+            <h5 id="result"></h5>
+            <h5>Made By Woosuk</h5>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     </body>
