@@ -1,1 +1,1 @@
-<h1>This is a Law of Search</h1>
+<h1>This is a program for searching</h1>
