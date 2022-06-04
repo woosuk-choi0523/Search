@@ -1,8 +1,8 @@
 import pandas as pd 
 import timeit
 from pyodide.http import open_url
-rl_content = open_url("https://raw.githubusercontent.com/woosuk-choi0523/genius/master/data.csv")
-df=pd.read_csv(rl_content,names=["이름","내용"])
+rl_content = open_url("")
+df=pd.read_csv("data.csv",names=["이름","내용"])
 name = df['이름']
 information = df['내용']
 csv = Element('csv')
